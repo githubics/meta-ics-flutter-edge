@@ -45,6 +45,8 @@ $ export XDG_RUNTIME_DIR=/run/user/1000
 $ export WAYLAND_DISPLAY=wayland-1
 ```
 
+**Note:** on the Variscite board you need to either omit setting `WAYLAND_DISPLAY` or set it to `wayland-0` instead.
+
 Now we are ready to launch the application. Open a terminal and run:
 
 ```bash
