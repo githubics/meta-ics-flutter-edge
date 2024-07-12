@@ -1,0 +1,19 @@
+#### Raspberry Pi specifics ####
+
+# We need u-boot in order to be able to use A/B partitioning.
+RPI_USE_U_BOOT = "1"
+PREFERRED_PROVIDER_u-boot-fw-utils = "libubootenv"
+
+# We need to install the kernel and the modules in the image wo se can update
+# them with the whole rootfs.
+IMAGE_INSTALL:append = " kernel-image kernel-modules"
+
+# This enables the UART debug by default.
+# See https://www.jeffgeerling.com/blog/2021/attaching-raspberry-pis-serial-console-uart-debugging
+ENABLE_UART = "1"
+
+# Comment out if you don't have the official RPi LCD.
+RPI_EXTRA_CONFIG = ' \n \
+        # Raspberry Pi 7\" display/touch screen \n \
+        lcd_rotate=2 \n \
+        '

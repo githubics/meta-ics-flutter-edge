@@ -1,0 +1,36 @@
+#
+# Machine Selection
+#
+#MACHINE = "raspberrypi3-64"
+#MACHINE = "raspberrypi4-64"
+#MACHINE = "imx8mp-var-dart"
+MACHINE ??= "unselected"
+
+DL_DIR ?= "${BSPDIR}/downloads"
+SSTATE_DIR ?= "${TOPDIR}/sstate-cache"
+TMPDIR = "${TOPDIR}/tmp"
+DISTRO ?= "flutter-edge-distro"
+PACKAGE_CLASSES ?= "package_deb"
+EXTRA_IMAGE_FEATURES ?= "debug-tweaks"
+USER_CLASSES ?= "buildstats"
+PATCHRESOLVE = "noop"
+BB_DISKMON_DIRS ??= "\
+    STOPTASKS,${TMPDIR},1G,100K \
+    STOPTASKS,${DL_DIR},1G,100K \
+    STOPTASKS,${SSTATE_DIR},1G,100K \
+    STOPTASKS,/tmp,100M,100K \
+    HALT,${TMPDIR},100M,1K \
+    HALT,${DL_DIR},100M,1K \
+    HALT,${SSTATE_DIR},100M,1K \
+    HALT,/tmp,10M,1K"
+CONF_VERSION = "2"
+
+# Disable this if you want to work on the recipes.
+# It is used to reduce the amount of storage needed by removing
+# intermediate binaries when the application gets packaged.
+INHERIT += "rm_work"
+
+# Enable the SPDX files generator.
+INHERIT += "create-spdx"
+
+#### Extra parameters below

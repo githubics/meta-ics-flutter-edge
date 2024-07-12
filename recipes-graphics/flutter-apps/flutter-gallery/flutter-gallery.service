@@ -1,0 +1,16 @@
+[Unit]
+Description=Flutter Gallery example
+Requires=weston.service
+After=weston.service
+
+[Service]
+Type=simple
+EnvironmentFile=-/etc/default/flutter
+Environment=WAYLAND_DISPLAY=wayland-1
+Environment=XDG_RUNTIME_DIR=/run/user/0/
+Environment=LD_LIBRARY_PATH=/usr/share/flutter/flutter-gallery/3.19.3/release/lib
+ExecStart=/usr/bin/flutter-client -b /usr/share/flutter/flutter-gallery/3.19.3/release/ -f
+Restart=on-failure
+
+[Install]
+WantedBy=graphical.target

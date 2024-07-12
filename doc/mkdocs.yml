@@ -1,0 +1,22 @@
+site_name: ICS' Flutter Edge Yocto layer
+site_author: Lisandro Pérez Meyer <lpmeyer@ics.com>
+site_description: >-
+  ICS' Flutter Edge layer
+
+theme:
+  name: material
+  logo: images/ics_logo.png
+
+plugins:
+  - with-pdf:
+        cover_subtitle: ICS' Flutter Edge layer
+        copyright: © 2024 ICS
+        output_path: pdf/meta-ics-flutter-edge.pdf
+
+markdown_extensions:
+    - toc:
+        permalink: 
+
+nav:
+  - 'index.md'
+  - 'flutter.md'

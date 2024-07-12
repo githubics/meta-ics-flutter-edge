@@ -1,0 +1,21 @@
+Index: git/psplash-colors.h
+===================================================================
+--- git.orig/psplash-colors.h
++++ git/psplash-colors.h
+@@ -12,13 +12,13 @@
+ #define _HAVE_PSPLASH_COLORS_H
+
+ /* This is the overall background color */
+-#define PSPLASH_BACKGROUND_COLOR 0xff,0xff,0xff
++#define PSPLASH_BACKGROUND_COLOR 0x42,0x2b,0x6f
+
+ /* This is the color of any text output */
+-#define PSPLASH_TEXT_COLOR 0x00,0x56,0xa5
++#define PSPLASH_TEXT_COLOR 0x59,0x59,0x5a
+
+ /* This is the color of the progress bar indicator */
+-#define PSPLASH_BAR_COLOR 0x00,0x56,0xa5
++#define PSPLASH_BAR_COLOR 0x59,0x59,0x5a
+
+ /* This is the color of the progress bar background */
+ #define PSPLASH_BAR_BACKGROUND_COLOR 0xff,0xff,0xff
