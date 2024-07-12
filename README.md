@@ -1,5 +1,7 @@
 # Yocto layer for ICS' Flutter Edge
 
+A part of [Flutter Embedded](https://www.flutter-embedded.com/)
+
 You can find the documentation:
 
 - Directly [in this repository](docs/doc/index.md).

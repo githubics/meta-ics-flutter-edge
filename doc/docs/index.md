@@ -1,6 +1,6 @@
 # Building the ICS' Flutter Edge demo
 
-By Integrated Computer Solutions, Inc.
+By Integrated Computer Solutions, Inc. Part of [Flutter Embedded](https://www.flutter-embedded.com/)
 
 ## Conventions
 
