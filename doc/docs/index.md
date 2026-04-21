@@ -18,7 +18,7 @@ For the build host we used an Ubuntu 22.04 LTS build, 64-bit. The following inst
 
 After installation of the host OS, you will need to install some packages, as well as configure the dash shell to not act as the system shell.
 
-You can find the full list of commands in[this script](https://github.com/githubics/ics-flutter-edge-manifests/blob/kirkstone/docker/install.sh).
+You can find the full list of commands in [this script](https://github.com/githubics/ics-flutter-edge-manifests/blob/kirkstone/docker/install.sh).
 
 ## Installing the Yocto environment
 
